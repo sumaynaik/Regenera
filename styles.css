@@ -1,42 +1,44 @@
-:root {
+:root{
   --accent: #1b9a59;
   --accent-dark: #167a45;
   --bg: #f6fbf7;
   --muted: #666;
-  --max-width: 1000px;
+  --max-width: 1100px;
 }
 
-/* RESET + BASE */
-* {
-  box-sizing: border-box;
-}
-body {
+/* RESET / BASE */
+*{ box-sizing: border-box; }
+body{
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  margin: 0;
-  background: var(--bg);
-  color: #222;
+  margin:0;
+  background:var(--bg);
+  color:#222;
 }
+.container{ max-width:var(--max-width); margin:0 auto; padding:1rem; }
 
-/* HEADER SECTION */
-.header {
+/* =========================
+   HEADER / NAV (modern)
+   ========================= */
+.header, .site-header { /* support both */
   background-color: #f4fff4;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-.nav-container {
+/* Modern header layout */
+.nav-container, .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1100px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 1rem;
 }
 
-/* BRANDING AREA */
-.branding {
+/* Branding: support both .branding and .brand */
+.branding, .brand {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -44,144 +46,143 @@ body {
   color: inherit;
 }
 
+/* Logo sizing — larger and balanced */
 .logo {
   height: 90px;
   width: auto;
   object-fit: contain;
   margin-right: 12px;
-  transition: transform 0.2s ease;
+  transition: transform .18s ease;
 }
-.logo:hover {
-  transform: scale(1.05);
-}
+.logo:hover{ transform: scale(1.03); }
 
-.site-title {
+/* Title */
+.site-title, h1.site-title, .branding h1 {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  margin:0;
 }
 
-/* NAVIGATION */
-.navbar ul {
+/* NAV containers: support both .navbar and .main-nav */
+.navbar ul, .main-nav {
   list-style: none;
   display: flex;
-  gap: 1.8rem;
+  gap: 1.6rem;
   margin: 0;
   padding: 0;
 }
+.navbar ul li, .main-nav a { margin: 0; }
 
-.navbar a {
+/* Links styling for both nav types */
+.navbar a, .main-nav a, .nav-links a {
   text-decoration: none;
   font-weight: 500;
   color: #145a32;
-  transition: color 0.2s ease;
+  transition: color .18s;
 }
-
-.navbar a:hover,
-.navbar a.active {
+.navbar a:hover, .main-nav a:hover, .nav-links a:hover,
+.navbar a.active, .main-nav a.active, .nav-links a.active{
   color: #2ecc71;
   text-decoration: underline;
 }
 
-/* MOBILE MENU TOGGLE */
-.menu-toggle {
+/* Mobile menu toggles: supports .menu-toggle (new) and .nav-toggle (old) */
+.menu-toggle, .nav-toggle {
   display: none;
   background: var(--accent);
   color: white;
-  font-size: 1.2rem;
   border: none;
-  padding: 0.5rem 0.7rem;
+  padding: .45rem .6rem;
   border-radius: 6px;
   cursor: pointer;
 }
 
-/* HERO SECTION */
-.hero {
-  padding: 4rem 1rem;
-  background: linear-gradient(180deg, #f0faf2, #f6fbf7);
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.4rem;
-  margin-bottom: 0.5rem;
-}
-.hero p {
-  color: var(--muted);
-  font-size: 1.1rem;
-  margin-bottom: 1.2rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.7rem 1.2rem;
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  border: none;
-  transition: background 0.2s ease;
-}
-.btn:hover {
-  background: var(--accent-dark);
-}
-.btn.ghost {
-  background: transparent;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-}
-
-/* FEATURES SECTION */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin: 2rem 0;
-}
-.features article {
-  background: #fff;
-  padding: 1.2rem;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-}
-
-/* FOOTER */
-.site-footer {
-  margin-top: 2rem;
-  padding: 1rem 0;
-  color: var(--muted);
-  text-align: center;
-}
-
-/* CONTACT FORM */
-.contact-form label {
-  display: block;
-  margin-bottom: 0.8rem;
-}
-input,
-textarea {
-  width: 100%;
-  padding: 0.6rem;
-  border: 1px solid #dfeee0;
-  border-radius: 6px;
-}
-.form-status {
-  margin-top: 0.6rem;
-}
-
-/* RESPONSIVE NAVIGATION */
-@media (max-width: 768px) {
-  .navbar ul {
+/* If the old layout used absolute dropdown (keep working) */
+.main-nav { gap: 1rem; }
+@media (max-width: 800px){
+  /* modern navbar -> column */
+  .navbar ul, .main-nav {
     flex-direction: column;
     width: 100%;
     text-align: center;
     margin-top: 1rem;
-    display: none;
+    display: none; /* toggled via .show class */
+    background: white;
+    padding: 0.8rem 0;
+    border-radius: 6px;
   }
-  .navbar ul.show {
+  .navbar ul.show, .main-nav.show {
     display: block;
   }
-  .menu-toggle {
-    display: block;
-  }
+
+  /* show toggle buttons if present */
+  .menu-toggle, .nav-toggle { display: block; }
+
+  /* if older CSS expected absolute menu, ensure spacing */
+  .main-nav { position: static; }
 }
 
+/* =========================
+   HERO / CONTENT / BUTTONS
+   ========================= */
+.hero {
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg,#f0faf2,#f6fbf7);
+  text-align: left;
+}
+.hero-content { max-width: 900px; margin: 0 auto; }
+.hero h2 { font-size: 2.25rem; margin:0 0 .6rem; }
+.hero p { color:var(--muted); font-size:1.05rem; margin:0 0 1rem; }
+
+.btn {
+  display:inline-block;
+  padding:.7rem 1.1rem;
+  background:var(--accent);
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  border: none;
+}
+.btn:hover{ background:var(--accent-dark); }
+
+/* Intro / features */
+.intro-section, .preview-section, .about, .features { padding: 2rem 1rem; }
+.card-grid, .features { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+.card, .features article {
+  background: #fff;
+  padding:1.2rem;
+  border-radius:8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+/* =========================
+   FOOTER / FORMS
+   ========================= */
+footer, .site-footer {
+  text-align:center;
+  padding:1rem;
+  color:var(--muted);
+  margin-top: 2rem;
+}
+
+.contact-form label { display:block; margin-bottom:.6rem; }
+input, textarea {
+  width:100%;
+  padding:.6rem;
+  border-radius:6px;
+  border:1px solid #dfeee0;
+}
+
+/* small helper: keep previous .tagline/.hero-inner classes working */
+.tagline { color: var(--muted); }
+.hero-inner { text-align:center; }
+
+/* ensure older selectors used earlier remain styled */
+.header-inner { display:flex; align-items:center; justify-content:space-between; }
+
+/* small screens tweaks for padding */
+@media (max-width: 520px){
+  .logo { height: 70px; }
+  .site-title { font-size: 1.2rem; }
+  .hero h2 { font-size: 1.6rem; }
+}
