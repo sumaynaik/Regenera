@@ -6,6 +6,16 @@ document.querySelectorAll('[id^="year"]').forEach(el=>el.textContent = year);
 
 
 // nav toggles (works for multiple pages with different IDs)
+
+const menuToggle = document.getElementById('menuToggle');
+const navList = document.querySelector('.navbar ul');
+
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
 function attachToggle(idToggle, idNav){
 const t = document.getElementById(idToggle);
 const n = document.getElementById(idNav);
