@@ -24,3 +24,36 @@
 </nav>
 </div>
 </header>
+
+
+<main class="container">
+<h1>Contact Us</h1>
+<p>Want to collaborate, volunteer or join an event? Send us a message.</p>
+
+
+<form id="contact-form" class="contact-form" onsubmit="return false;">
+<label>Name<br>
+<input id="name" type="text" required>
+</label>
+<label>Email<br>
+<input id="email" type="email" required>
+</label>
+<label>Message<br>
+<textarea id="message" rows="5" required></textarea>
+</label>
+<button id="send-btn" class="btn">Send message</button>
+<p id="form-status" class="form-status" aria-live="polite"></p>
+</form>
+</main>
+
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<p>&copy; <span id="year-contact"></span> Green Revolt</p>
+</div>
+</footer>
+
+
+<script src="/scripts.js"></script>
+</body>
+</html>
