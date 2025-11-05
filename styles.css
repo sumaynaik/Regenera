@@ -1,42 +1,70 @@
-/* Simple, readable CSS for explanation */
-:root{
---accent: #1b9a59;
---accent-dark: #167a45;
---bg: #f6fbf7;
---muted: #666;
---max-width: 1000px;
+:root {
+  --accent: #1b9a59;
+  --accent-dark: #167a45;
+  --bg: #f6fbf7;
+  --muted: #666;
+  --max-width: 1000px;
+}
+
+/* RESET + BASE */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  background: var(--bg);
+  color: #222;
 }
 
 /* HEADER SECTION */
 .header {
-  background-color: #f4fff4; /* light green tone */
-  padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #f4fff4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* spreads logo + nav nicely */
+  justify-content: space-between;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0.8rem 1.2rem;
 }
 
+/* BRANDING AREA */
 .branding {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .logo {
-  height: 50px;
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 12px;
+  transition: transform 0.2s ease;
+}
+.logo:hover {
+  transform: scale(1.05);
 }
 
+.site-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* NAVIGATION */
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.8rem;
   margin: 0;
   padding: 0;
 }
@@ -45,6 +73,7 @@
   text-decoration: none;
   font-weight: 500;
   color: #145a32;
+  transition: color 0.2s ease;
 }
 
 .navbar a:hover,
@@ -53,22 +82,94 @@
   text-decoration: underline;
 }
 
-/* Mobile menu toggle button (hidden on desktop) */
+/* MOBILE MENU TOGGLE */
 .menu-toggle {
   display: none;
-  background: #2ecc71;
+  background: var(--accent);
   color: white;
   font-size: 1.2rem;
   border: none;
   padding: 0.5rem 0.7rem;
   border-radius: 6px;
+  cursor: pointer;
 }
 
-/* Responsive: stack nav links on mobile */
+/* HERO SECTION */
+.hero {
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg, #f0faf2, #f6fbf7);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  transition: background 0.2s ease;
+}
+.btn:hover {
+  background: var(--accent-dark);
+}
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* FEATURES SECTION */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.features article {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* FOOTER */
+.site-footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* CONTACT FORM */
+.contact-form label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #dfeee0;
+  border-radius: 6px;
+}
+.form-status {
+  margin-top: 0.6rem;
+}
+
+/* RESPONSIVE NAVIGATION */
 @media (max-width: 768px) {
-  .nav-container {
-    flex-wrap: wrap;
-  }
   .navbar ul {
     flex-direction: column;
     width: 100%;
@@ -84,34 +185,3 @@
   }
 }
 
-*{box-sizing:border-box}
-body{font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#222}
-.container{max-width:var(--max-width); margin:0 auto; padding:1rem}
-.header-inner, .footer-inner{display:flex; align-items:center; justify-content:space-between}
-.site-header{background:#fff; border-bottom:1px solid #e6efe9; position:sticky; top:0; z-index:10}
-.brand{display:flex; gap:.5rem; align-items:center; text-decoration:none; color:inherit}
-.logo{width:88px; height:88px; object-fit:contain}
-.site-title{font-weight:700}
-.main-nav{display:flex; gap:1rem}
-.main-nav a{color:var(--muted); text-decoration:none}
-.nav-toggle{display:none; background:none; border:0; font-size:1.4rem}
-.hero{padding:4rem 0; background:linear-gradient(180deg, #f0faf2, #f6fbf7)}
-.hero-inner{text-align:center}
-.hero h1{font-size:2.2rem; margin:.2rem 0}
-.tagline{color:var(--muted)}
-.btn{display:inline-block; padding:.6rem 1rem; background:var(--accent); color:white; text-decoration:none; border-radius:6px; margin-right:.5rem; border:0}
-.btn.ghost{background:transparent; color:var(--accent); border:1px solid var(--accent)}
-.features{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin:2rem 0}
-.features article{background:#fff; padding:1rem; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.04)}
-.spotlight{background:#fff; padding:1.5rem; border-radius:8px}
-.site-footer{margin-top:2rem; padding:1rem 0; color:var(--muted)}
-.contact-form label{display:block; margin-bottom:.8rem}
-input, textarea{width:100%; padding:.6rem; border:1px solid #dfeee0; border-radius:6px}
-.form-status{margin-top:.6rem}
-
-
-/* Responsive */
-@media (max-width:800px){
-.main-nav{display:none; flex-direction:column; gap:0.4rem; background:#fff; padding:1rem; position:absolute; right:1rem; top:64px; border:1px solid #e6efe9; border-radius:6px}
-.nav-toggle{display:block}
-}
