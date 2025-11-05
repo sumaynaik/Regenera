@@ -1,4 +1,4 @@
-// Simple JS: mobile nav toggle, year injection, and contact form validation
+//mobile nav toggle, year injection, and contact form validation
 (function () {
   // year
   const year = new Date().getFullYear();
@@ -14,7 +14,7 @@
     });
   }
 
-  // Support for modern .menu-toggle (no ID) + .navbar ul
+  // Support for .menu-toggle (no ID) + .navbar ul
   const genericMenuBtn = document.querySelector('.menu-toggle');
   const genericNavList = document.querySelector('.navbar ul');
   if (genericMenuBtn && genericNavList) {
