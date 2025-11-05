@@ -14,7 +14,7 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   margin: 0;
   background: var(--bg);
-  color: #f4fff4;
+  color: #222;
 }
 
 /* ------------------ */
