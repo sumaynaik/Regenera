@@ -8,43 +8,82 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<header class="site-header">
-<div class="container header-inner">
-<a href="index.html" class="brand">
-<img src="/logo.png" alt="Green Revolt logo" class="logo">
-<span class="site-title">Green Revolt</span>
-</a>
-<button id="nav-toggle-2" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-<nav id="main-nav-2" class="main-nav">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="initiatives.html">Initiatives</a>
-<a href="resources.html">Resources</a>
-<a href="contact.html">Contact</a>
-</nav>
-</div>
-</header>
+  <!-- HEADER / NAVIGATION -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="branding">
+        <img src="logo.png" alt="Green Revolt Logo" class="logo">
+      </div>
 
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+		  <li><a href="news.html">News</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-<main class="container">
-<section class="content">
-<h1>About Green Revolt</h1>
-<p>Green Revolt is a student-driven initiative made to promote circular economy thinking and green entrepreneurship. We help projects transition from linear to circular design.</p>
-<h2>Our Goals</h2>
-<ul>
-<li>Teach practical circular design methods</li>
-<li>Support green startups</li>
-<li>Run community-led repair and recycling workshops</li>
-</ul>
-</section>
+      <button id="menuToggle" class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+<main class="container about-page">
+  <section class="about-hero">
+    <div class="about-text">
+      <h1>About Green Revolt</h1>
+      <p>
+        Green Revolt is a student-led sustainability platform dedicated to promoting circular economy thinking 
+        and green entrepreneurship. We empower communities and innovators to shift from linear to circular systems — 
+        where resources are reused, waste is minimized, and innovation drives environmental balance.
+      </p>
+      <p>
+        Every action we take contributes to building a resilient, green future — one where mindful living 
+        and creative design shape a healthier planet for all.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="./images/freshair.webp" alt="Person breathing fresh air surrounded by greenery">
+      <p class="caption">A vision of clean air, thriving ecosystems, and conscious living for all.</p>
+    </div>
+  </section>
+
+  <section class="about-core">
+    <div class="goals">
+      <h2>Our Goals</h2>
+      <ul>
+        <li>♻️ Teach practical circular design and sustainability methods</li>
+        <li>🌲 Support and promote young entrepreneurs building green startups</li>
+        <li>🔧 Run community-led repair, recycling, and awareness programs</li>
+        <li>🤝 Encourage collaboration between students, experts, and changemakers</li>
+        <li>🌍 Promote lifestyle shifts toward conscious consumption and zero waste</li>
+      </ul>
+    </div>
+
+    <div class="vision">
+      <h2>Our Vision</h2>
+      <p>
+        To create an ecosystem where innovation, responsibility, and sustainability thrive together — 
+        turning environmental challenges into opportunities for growth and renewal. 
+        Green Revolt aims to make sustainability not just a movement, but a mindset.
+      </p>
+	      <div class="vision-image">
+      <img src="./images/greenearth.jpg" alt="Earth globe image with greenary">
+      <p class="caption">A vision to improve living quality.</p>
+    </div>
+  </section>
 </main>
 
-
-<footer class="site-footer">
-<div class="container footer-inner">
-<p>&copy; <span id="year-about"></span> Green Revolt</p>
-</div>
-</footer>
-<script src="/scripts.js"></script>
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="year"></span> Green Revolt — Website Contest (11 November 2025)</p>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
 </body>
 </html>
