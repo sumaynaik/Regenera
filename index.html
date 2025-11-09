@@ -19,7 +19,6 @@
     <div class="container nav-container">
       <div class="branding">
         <img src="logo.png" alt="Green Revolt Logo" class="logo">
-        <h1>Green Revolt</h1>
       </div>
 
       <nav class="navbar">
@@ -27,7 +26,8 @@
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="initiatives.html">Initiatives</a></li>
-          <li><a href="resources.html">Resources</a></li>
+		  <li><a href="news.html">News</a></li>
+          <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -36,48 +36,58 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Join the Green Revolution 🌱</h2>
-      <p>Together we can build a circular economy — where nothing is wasted and everything has value.</p>
-      <a href="about.html" class="btn">Learn More</a>
-    </div>
-  </section>
+<!-- HERO SECTION -->
+<section class="hero flex-container">
+  <div class="hero-text">
+    <h2>Join the <span class="highlight">Green Revolt 🌲</span></h2>
+    <p>
+      Ready to make an impact? Be part of a movement reshaping how we live, work, and create — 
+      where <strong>nothing is wasted</strong> and <strong>everything has purpose</strong>.
+    </p>
+    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    <p class="note">Together, we can power the circular economy revolution.</p>
+  </div>
 
+  <div class="hero-image">
+    <img src="./test/heropage-low.jpeg" alt="People collaborating for sustainability">
+  </div>
+</section>
   <!-- ABOUT PREVIEW -->
-  <section class="intro-section">
-    <div class="container">
-      <h2>What is a Circular Economy?</h2>
-      <p>
-        The circular economy redefines growth — focusing on positive society-wide benefits.  
-        It entails gradually decoupling economic activity from the consumption of finite resources,  
-        and designing waste out of the system.
-      </p>
-    </div>
-  </section>
-
-  <!-- INITIATIVES PREVIEW -->
-  <section class="preview-section">
-    <div class="container">
-      <h2>Our Key Green Initiatives</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>♻️ Waste to Resource</h3>
-          <p>Turning plastic and organic waste into reusable materials and compost.</p>
+<section class="rest preview-section">
+  <div class="container">
+    <h2>Our Key Green Initiatives</h2>
+    <div class="card-grid">
+      <!-- Waste to Resource Card -->
+      <div class="card">
+        <div class="image-container">
+          <img src="./test/image.jpg" alt="Waste to Resource Project" class="card-image">
         </div>
-        <div class="card">
-          <h3>🔋 Renewable Energy</h3>
-          <p>Encouraging solar, wind, and community-based green power projects.</p>
-        </div>
-        <div class="card">
-          <h3>🌍 Eco-Entrepreneurship</h3>
-          <p>Promoting startups that innovate for sustainability and green jobs.</p>
-        </div>
+        <h3>♻️ Waste to Resource</h3>
+        <p>Transforming plastic and organic waste into reusable materials and compost, reducing landfill waste and creating sustainable resources.</p>
       </div>
-      <a href="initiatives.html" class="btn">View All Initiatives</a>
+
+      <!-- Renewable Energy Card -->
+      <div class="card">
+        <div class="image-container">
+          <img src="./test/solar panel.jpg" alt="Renewable Energy Projects" class="card-image">
+        </div>
+        <h3>🔋 Renewable Energy</h3>
+        <p>Encouraging solar, wind, and community-based green power projects to reduce carbon footprints and empower local communities.</p>
+      </div>
+
+      <!-- Eco-Entrepreneurship Card -->
+      <div class="card">
+        <div class="image-container">
+          <img src="./test/green entrepreneurship.png" class="card-image">
+        </div>
+        <h3>🌍 Eco-Entrepreneurship</h3>
+        <p>Promoting startups and innovators who pioneer sustainable solutions, fostering green jobs and responsible business practices.</p>
+      </div>
     </div>
-  </section>
+    <a href="initiatives.html" class="btn">View All Initiatives</a>
+  </div>
+</section>
+
 
   <!-- FOOTER -->
   <footer>
@@ -87,7 +97,5 @@
       <a href="contact.html">Contact</a>
     </p>
   </footer>
-
-  <script src="scripts.js"></script>
 </body>
 </html>
