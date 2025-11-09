@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resources — Green Revolt</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="branding">
+        <img src="logo.png" alt="Green Revolt Logo" class="logo">
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+		  <li><a href="news.html">News</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="menuToggle" class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+
+<main class="container faq-main">
+  <h1>Frequently Asked Questions</h1>
+  <p>Answers to the most common questions about Green Revolt, circular economy, and how you can get involved.</p>
+
+  <section class="faq-section">
+    <div class="faq-item">
+      <button class="faq-question">What is Green Revolt?</button>
+      <div class="faq-answer">
+        <p>Green Revolt is a platform supporting circular economy initiatives and green entrepreneurship through guidance, workshops, and community projects.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How can I participate in initiatives?</button>
+      <div class="faq-answer">
+        <p>You can join our events, volunteer, or submit your circular project ideas via the Contact page.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do you provide resources for green startups?</button>
+      <div class="faq-answer">
+        <p>Yes, we provide templates, guides, and tools to help you design circular products and sustainable businesses.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How can I contact you?</button>
+      <div class="faq-answer">
+        <p>You can reach us via the Contact page or email us directly at <a href="mailto:hello@greenrevolt.example">hello@greenrevolt.example</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="year"></span> Green Revolt — Website Contest (11 November 2025)</p>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+  <script>
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    item.classList.toggle('active');
+  });
+});
+</script>
+
+</body>
+</html>
