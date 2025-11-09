@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>News — Green Revolt</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/styles.css">
+<style>
+/* ===================== News / Global Updates Page ===================== */
+.news-main {
+  margin: 3rem auto;
+  max-width: 1100px;
+  width: 90%;
+}
+.news-main h1 {
+  font-size: 2.8rem;
+  color: #1b9a59;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.news-main p.lead {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+.news-card {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+.news-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.news-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.news-category {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.4rem;
+}
+.news-title {
+  font-size: 1.4rem;
+  color: #1b9a59;
+  margin: 0.4rem 0 0.8rem;
+  flex-grow: 1;
+}
+.news-date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 0.8rem;
+}
+.news-summary {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+.news-readmore {
+  margin-top: auto;
+  text-decoration: none;
+  font-weight: 600;
+  color: #1b9a59;
+  transition: color 0.3s;
+}
+.news-readmore:hover {
+  color: #167a45;
+}
+@media (max-width: 600px) {
+  .news-img {
+    height: 140px;
+  }
+}
+</style>
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="branding">
+        <img src="logo.png" alt="Green Revolt Logo" class="logo">
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+          <li><a href="news.html" class="active">News</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="menuToggle" class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+<main class="container news-main">
+  <h1>Global Sustainability & Circular Economy News</h1>
+  <p class="lead">Stay updated with the latest developments, innovations, and stories in the world of circular economy and green entrepreneurship.</p>
+
+  <section class="news-grid">
+
+    <article class="news-card">
+      <img src="https://joint-research-centre.ec.europa.eu/sites/default/files/styles/oe_theme_medium_no_crop/public/2025-10/circular_economy_steel_SH_AdobeStock_80022661.jpg?itok=eNrZ9aFY" alt="Circular Economy Summit 2025" class="news-img">
+      <div class="news-content">
+        <div class="news-category">Circular Economy</div>
+        <h2 class="news-title">Circular economy could slash up to 231 million tonnes of CO₂ from heavy industry per year</h2>
+        <div class="news-date">October 3, 2025</div>
+        <p class="news-summary">A new report by the Joint Research Centre shows how circular economy measures in sectors like steel, plastics, cement and aluminium could reduce between 189 and 231 Mt CO₂ equivalent per year.</p>
+        <a href="https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/circular-economy-could-slash-231-million-tonnes-co2-heavy-industry-year-2025-10-03_en" target="_blank" class="news-readmore">Read more →</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="https://www.electronicsmedia.info/wp-content/uploads/2025/11/Delta-Electronics.png" alt="Delta Electronics ISO 59004" class="news-img">
+      <div class="news-content">
+        <div class="news-category">Industry Certification</div>
+        <h2 class="news-title">Delta becomes the first ICT company to attain ISO 59004 Circular Economy Certification</h2>
+        <div class="news-date">November 8, 2025</div>
+        <p class="news-summary">Delta Electronics achieved the ISO 59004 certification, making it the first in the global ICT sector to meet this circular economy standard.</p>
+        <a href="https://www.electronicsmedia.info/2025/11/08/delta-achieves-worlds-first-iso-59004-certification-in-ict" target="_blank" class="news-readmore">Read more →</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="https://www.unesco.org/sites/default/files/styles/paragraph_medium_desktop/article/2025-11/_MG_8088.jpg.webp?itok=6gqetz1h" alt="LATAM Airlines & UNESCO" class="news-img">
+      <div class="news-content">
+        <div class="news-category">Community Impact</div>
+        <h2 class="news-title">LATAM Airlines Peru and UNESCO welcome first Amazonian women's craft association</h2>
+        <div class="news-date">November 7, 2025</div>
+        <p class="news-summary">The “Segundo Vuelo” program promotes circular economy through supporting traditional crafts and sustainable livelihoods in the Amazon region.</p>
+        <a href="https://www.unesco.org/en/articles/latam-airlines-peru-and-unesco-peru-welcome-first-amazonian-womens-association-segundo-vuelo" target="_blank" class="news-readmore">Read more →</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="https://esgnews.com/wp-content/uploads/2025/10/Screenshot-2025-10-25-at-09.21.10.png.webp" alt="Climate Week NYC 2025" class="news-img">
+      <div class="news-content">
+        <div class="news-category">Events</div>
+        <h2 class="news-title">Advancing the Circular Economy: Key Takeaways from Climate Week NYC 2025</h2>
+        <div class="news-date">October 25, 2025</div>
+        <p class="news-summary">Collaborative partnerships highlighted practical approaches for implementing circular economy initiatives globally.</p>
+        <a href="https://esgnews.com/advancing-the-circular-economy-key-takeaways-on-collaborative-partnerships-from-nest-climate-campus-at-climate-week-2025/" target="_blank" class="news-readmore">Read more →</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="https://www.reccessary.com/data/editor/images/%E9%A6%96%E5%A0%B4%E5%9C%8B%E9%9A%9B%E8%88%87%E8%AB%87%E3%80%8C%E5%BE%9E%E5%BB%A2%E6%A3%84%E7%89%A9%E5%9B%9E%E6%94%B6%E5%88%B0%E7%B3%BB%E7%B5%B1%E8%BD%89%E5%9E%8B%E3%80%8D%EF%BC%8C%E8%81%9A%E7%84%A6%E4%BA%9E%E5%A4%AA%E5%90%84%E5%9C%8B%E5%A6%82%E4%BD%95%E5%BE%9E%E4%BB%A5%E5%BB%A2%E6%A3%84%E7%89%A9%E7%AE%A1%E7%90%86%E7%82%BA%E4%B8%BB%E7%9A%84%E6%80%9D%E7%B6%AD.jpg" alt="Taiwan Circular Economy" class="news-img">
+      <div class="news-content">
+        <div class="news-category">Policy</div>
+        <h2 class="news-title">Taiwan unveils draft circular economy roadmap targeting six key industries</h2>
+        <div class="news-date">October 23, 2025</div>
+        <p class="news-summary">The roadmap aims to increase circularity rate 2.5× by 2050, focusing on materials, electronics, packaging, textiles, chemicals, and construction.</p>
+        <a href="https://www.reccessary.com/en/news/taiwan-circular-economy-roadmap-apcer" target="_blank" class="news-readmore">Read more →</a>
+      </div>
+    </article>
+
+	<article class="news-card">
+	  <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202510/e-waste-032449737-16x9.png?VersionId=sN3D9vrolzN0pCfBjdjwEoQyTBO19UbB&size=690:388" alt="India electronics circular economy" class="news-img">
+	  <div class="news-content">
+		<div class="news-category">Electronics & E‑Waste</div>
+		<h2 class="news-title">India launches five‑year project to transform electronics sector into a circular economy</h2>
+		<div class="news-date">October 14, 2025</div>
+		<p class="news-summary">With support from United Nations Development Programme (UNDP) and the Global Environment Facility (GEF), India’s electronics sector will now focus on eco‑design, secondary raw materials and circular business models.</p>
+		<a href="https://www.indiatoday.in/environment/story/india-undp-united-nation-e-waste-management-mobile-waste-mercury-lead-sustainable-practices-climate-change-2802743-2025-10-14" target="_blank" class="news-readmore">Read more →</a>
+	  </div>
+	</article>
+
+	<article class="news-card">
+	  <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2025-11/07/full/20251106174411.jpg" alt="India circular economy industries" class="news-img">
+	  <div class="news-content">
+		<div class="news-category">Industry & Manufacturing</div>
+		<h2 class="news-title">Secondary aluminium in India powers green growth and circular economy leadership</h2>
+		<div class="news-date">November  7, 2025</div>
+		<p class="news-summary">India’s secondary aluminium industry is driving the transition to circularity — using recycled aluminium which consumes 95 % less energy and emits over 90 % less CO₂ than primary smelting.</p>
+		<a href="https://www.business-standard.com/content/press-releases-ani/secondary-aluminium-powering-india-s-green-growth-circular-economy-and-global-competitiveness-125110700010_1.html" target="_blank" class="news-readmore">Read more →</a>
+	  </div>
+	</article>
+
+	<article class="news-card">
+	  <img src="https://thecsrjournal.in/wp-content/uploads/2025/10/WhatsApp-53.webp" alt="India circular fashion innovations" class="news-img">
+	  <div class="news-content">
+		<div class="news-category">Fashion & Textiles</div>
+		<h2 class="news-title">India leads global dialogue on circular fashion with R|Elan™ Circular Design Challenge 2025</h2>
+		<div class="news-date">October 11, 2025</div>
+		<p class="news-summary">India’s fashion and textile industry is positioning itself at the forefront of circular innovation, showcasing how design and materials can align with sustainable business models.</p>
+		<a href="https://thecsrjournal.in/india-leads-the-global-dialogue-on-circular-fashion-with-relan-circular-design-challenge-in-partnership-with-the-united-nations-in-india-2025/" target="_blank" class="news-readmore">Read more →</a>
+	  </div>
+	</article>
+
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Green Revolt — Website Contest (11 November 2025)</p>
+  <p>
+    <a href="about.html">About</a> |
+    <a href="contact.html">Contact</a>
+  </p>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
