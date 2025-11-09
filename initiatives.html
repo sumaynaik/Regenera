@@ -6,52 +6,200 @@
 <title>Initiatives — Green Revolt</title>
 <link rel="icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css">
+<style>
+.read-more {
+  display: inline-block;
+  margin-top: 0.6rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+.read-more:hover {
+  background: var(--accent-dark);
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-<div class="container header-inner">
-<a href="index.html" class="brand">
-<img src="/logo.png" alt="Green Revolt logo" class="logo">
-<span class="site-title">Green Revolt</span>
-</a>
-<button id="nav-toggle-3" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-<nav id="main-nav-3" class="main-nav">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="initiatives.html">Initiatives</a>
-<a href="resources.html">Resources</a>
-<a href="contact.html">Contact</a>
-</nav>
-</div>
-</header>
+  <!-- HEADER / NAVIGATION -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="branding">
+        <img src="logo.png" alt="Green Revolt Logo" class="logo">
+      </div>
 
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="initiatives.html" class="active">Initiatives</a></li>
+		  <li><a href="news.html">News</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="menuToggle" class="menu-toggle">☰</button>
+    </div>
+  </header>
 
 <main class="container">
-<h1>Initiatives & Programs</h1>
-<section class="initiative-list">
-<article>
-<h3>Repair Cafe</h3>
-<p>Monthly community event to teach repair skills and reuse items.</p>
-</article>
-<article>
-<h3>Startup Bootcamp</h3>
-<p>6-week program to validate circular business ideas and create MVPs.</p>
-</article>
-<article>
-<h3>Material Exchange</h3>
-<p>Local marketplace for surplus materials — divert waste from landfills.</p>
-</article>
-</section>
+  <h1>Our Initiatives & Programs</h1>
+
+  <section class="initiatives-intro">
+    <p>
+      Our initiatives focus on bridging awareness and action — turning sustainability goals into hands-on community projects. 
+      By combining innovation, education, and collaboration, we empower individuals and startups to create lasting change 
+      in how we design, consume, and reuse materials.
+    </p>
+    <p>
+      Each program under Green Revolt contributes to the principles of a circular economy: minimizing waste, 
+      extending product lifecycles, and regenerating natural systems. 
+      From local repair cafés to renewable energy workshops, these initiatives help communities rethink value, 
+      reduce dependence on linear production models, and build a greener, more resilient future together.
+    </p>
+  </section>
+
+  <section class="initiative-list">
+    <div class="initiative-block">
+      <img src="./images/Waste to Wealth.jpg" alt="Waste to Resource" class="initiative-img">
+      <div class="initiative-content">
+        <h3>♻️ Waste to Resource</h3>
+        <p>
+          The Waste to Resource initiative redefines how we see waste, turning discarded plastic and organic materials into opportunities for renewal. 
+          By converting waste into reusable products and compost, we reduce the burden on overflowing landfills and promote sustainable alternatives to disposal. 
+          Every transformation contributes to cleaner air, healthier soil, and a more balanced ecosystem. 
+          Communities learn to separate, process, and reuse what was once considered trash, creating both awareness and local employment. 
+          Plastic finds new life as durable goods, while organic matter enriches the earth as nutrient-rich compost. 
+          This process not only conserves energy but also decreases the demand for virgin raw materials. 
+          It encourages responsibility at every level — from households to industries. 
+          The circular approach ensures that resources remain in continuous use, minimizing environmental loss. 
+          As waste becomes raw material again, pollution declines and production cycles shorten. 
+          It’s a movement that links innovation with responsibility. 
+          Ultimately, it demonstrates that sustainability begins where waste ends.
+        </p>
+      </div>
+    </div>
+
+    <div class="initiative-block">
+      <img src="./images/clean.jpg" alt="People cleaning street" class="initiative-img">
+      <div class="initiative-content">
+        <h3>🧹 Community Clean-Up Drives</h3>
+        <p>
+         The Community Clean-Up Drives unite citizens to reclaim public spaces from waste and neglect.
+         Teams collaborate to clean streets, beaches, and parks — restoring beauty and health to shared environments.
+         These drives build awareness about how daily habits affect local ecosystems.
+         Participants witness firsthand the impact of plastic pollution and careless dumping.
+         Through collective action, individuals learn that change begins at the community level.
+         Collected waste is segregated for recycling or upcycled into creative materials.
+         Local businesses often join to sponsor gloves, bins, and transportation, amplifying impact.
+         Beyond cleaning, the events foster civic pride and environmental stewardship.
+         Children and youth emerge as ambassadors for responsible waste management.
+         Social media campaigns document progress and inspire neighboring areas to join.
+         Every cleanup leaves more than a tidy space — it nurtures responsibility and hope.
+         Ultimately, it turns simple effort into a habit of care for our planet.
+        </p>
+      </div>
+    </div>
+
+    <div class="initiative-block">
+      <img src="./images/solar panel.jpg" alt="Renewable Energy" class="initiative-img">
+      <div class="initiative-content">
+        <h3>🔋 Renewable Energy</h3>
+        <p>
+          The Renewable Energy Revolution initiative accelerates the shift toward clean and decentralized power systems.
+          It promotes solar, wind, and biogas technologies that reduce reliance on fossil fuels.
+          Through workshops and community installations, citizens learn to harness nature’s energy responsibly.
+          Households and institutions adopt rooftop solar systems to cut costs and emissions.
+          Training programs empower youth to become skilled green energy technicians.
+          Partnerships with local governments help expand microgrids in underserved areas.
+          Every installed panel or turbine brings us closer to energy independence and resilience.
+          Educational campaigns spread awareness about energy efficiency and conservation habits.
+          Businesses are guided to adopt renewable energy as a long-term investment.
+          The initiative encourages innovation in storage, smart grids, and off-grid solutions.
+          By democratizing access to clean power, it uplifts both people and the planet.
+          Together, these actions ignite a sustainable energy future for generations to come.
+        </p>
+      </div>
+    </div>
+
+    <div class="initiative-block">
+      <img src="./images/tree.jpg" alt="Urban Green Spaces" class="initiative-img">
+      <div class="initiative-content">
+        <h3>🌳 Tree-Planting & Urban Forests</h3>
+        <p>
+          The Tree-Planting and Urban Forests initiative transforms unused lands into living green lungs.
+          It brings together volunteers, schools, and local authorities to plant native species that thrive naturally.
+          Each sapling represents a commitment to restore ecological balance and biodiversity.
+          The program focuses on carbon absorption, soil restoration, and shade creation in urban zones.
+          By mapping micro-climates, the right tree is planted in the right place for long-term growth.
+          Regular maintenance drives ensure survival and promote water-efficient landscaping.
+          Workshops educate citizens about pruning, mulching, and the value of native trees.
+          Green corridors connect fragmented habitats, supporting birds and pollinators.
+          These forests cool concrete neighborhoods and reduce air pollutants measurably.
+          Partnerships with local industries help offset emissions responsibly.
+          Every growing canopy becomes a classroom for sustainability in action.
+          In time, the initiative builds greener, calmer, and cleaner cities for all.
+        </p>
+      </div>
+    </div>
+
+    <div class="initiative-block">
+      <img src="./images/green entrepreneurship.png" alt="Renewable Power Drive" class="initiative-img">
+      <div class="initiative-content">
+        <h3>💡 Eco-Entrepreneurship & Green Innovation</h3>
+        <p>
+          The Eco-Entrepreneurship and Green Innovation program nurtures new ideas for a sustainable economy.
+          It supports innovators who turn environmental challenges into viable business opportunities.
+          Workshops introduce participants to circular design, ethical sourcing, and waste reduction.
+          Startups receive mentorship to scale green products that serve people and planet alike.
+          The initiative builds confidence to lead in renewable energy, recycling, and sustainable fashion.
+          Through networking events, eco-founders connect with investors and communities.
+          Students learn how social entrepreneurship can align profit with planetary health.
+          Hands-on sessions encourage creative problem-solving using local materials.
+          Pilot projects test renewable prototypes and bio-based alternatives.
+          The ecosystem grows stronger as entrepreneurs collaborate instead of compete.
+          Every success story inspires others to rethink the meaning of growth.
+          Together, these changemakers power the transition to a cleaner, circular future.
+        </p>
+      </div>
+    </div>
+  </section>
 </main>
 
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="year"></span> Green Revolt — Website Contest (11 November 2025)</p>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
 
-<footer class="site-footer">
-<div class="container footer-inner">
-<p>&copy; <span id="year-init"></span> Green Revolt</p>
-</div>
-</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".initiative-content p").forEach(p => {
+    const btn = document.createElement("button");
+    btn.textContent = "Read more";
+    btn.className = "read-more";
+    p.after(btn);
 
+    const fullText = p.innerHTML.trim();
+    const shortText = fullText.split(" ").slice(0, 60).join(" ") + "...";
 
-<script src="/scripts.js"></script>
+    p.innerHTML = shortText;
+
+    btn.addEventListener("click", () => {
+      const expanded = btn.textContent === "Read less";
+      p.innerHTML = expanded ? shortText : fullText;
+      btn.textContent = expanded ? "Read more" : "Read less";
+    });
+  });
+});
+</script>
 </body>
 </html>
