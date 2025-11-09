@@ -1,3 +1,4 @@
+<!-- ...existing code... -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,52 +9,138 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<header class="site-header">
-<div class="container header-inner">
-<a href="index.html" class="brand">
-<img src="/logo.png" alt="Green Revolt logo" class="logo">
-<span class="site-title">Green Revolt</span>
-</a>
-<button id="nav-toggle-5" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-<nav id="main-nav-5" class="main-nav">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="initiatives.html">Initiatives</a>
-<a href="resources.html">Resources</a>
-<a href="contact.html">Contact</a>
-</nav>
-</div>
-</header>
+  <!-- HEADER / NAVIGATION -->
+  <header class="header" role="banner">
+    <div class="container nav-container">
+      <div class="branding">
+        <img src="logo.png" alt="Green Revolt Logo" class="logo">
+      </div>
 
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+		  <li><a href="news.html">News</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
 
-<main class="container">
-<h1>Contact Us</h1>
-<p>Want to collaborate, volunteer or join an event? Send us a message.</p>
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    </div>
+  </header>
 
+<main class="container contact-main" id="main" role="main" tabindex="-1">
 
-<form id="contact-form" class="contact-form" onsubmit="return false;">
-<label>Name<br>
-<input id="name" type="text" required>
-</label>
-<label>Email<br>
-<input id="email" type="email" required>
-</label>
-<label>Message<br>
-<textarea id="message" rows="5" required></textarea>
-</label>
-<button id="send-btn" class="btn">Send message</button>
-<p id="form-status" class="form-status" aria-live="polite"></p>
-</form>
+  <!-- Contact Intro -->
+  <section class="contact-intro">
+    <h1>Get in Touch</h1>
+    <p>Interested in collaborating, volunteering, or attending an event? Drop us a message and we'll respond within a few days.</p>
+    <address class="contact-info">
+      <strong>Green Revolt</strong><br>
+      Email: <a href="mailto:hello@greenrevolt.example">hello@greenrevolt.example</a><br>
+      Phone: <a href="tel:+1234567890">+1 (234) 567-890</a>
+    </address>
+  </section>
+
+  <!-- Contact Panel -->
+  <section class="contact-panel" aria-labelledby="contact-heading">
+
+    <!-- Image Section -->
+    <figure class="contact-image" aria-hidden="false">
+      <img src="images/contact.webp" alt="Contact image" class="hero-img">
+    </figure>
+
+    <!-- Form Section -->
+    <form id="contact-form" class="contact-form" novalidate>
+      <h2 id="contact-heading" class="sr-only">Contact form</h2>
+
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required aria-required="true" autocomplete="name" placeholder="Your full name">
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required aria-required="true" autocomplete="email" placeholder="you@example.com">
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required aria-required="true" placeholder="Tell us about your inquiry"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button id="send-btn" type="submit" class="btn">Send Message</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+
+  </section>
 </main>
 
 
-<footer class="site-footer">
-<div class="container footer-inner">
-<p>&copy; <span id="year-contact"></span> Green Revolt</p>
-</div>
-</footer>
 
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Green Revolt — Website Contest (11 November 2025)</p>
+      <p>
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
 
-<script src="/scripts.js"></script>
+<script>
+/* Lightweight client-side form handling (no network request). Replace with real endpoint as needed. */
+(function(){
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  const btn = document.getElementById('send-btn');
+  const yearEl = document.getElementById('year');
+
+  yearEl.textContent = new Date().getFullYear();
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    status.textContent = '';
+    btn.disabled = true;
+    btn.classList.add('loading');
+
+    // Simple constraint validation
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      status.textContent = 'Please complete the form.';
+      btn.disabled = false;
+      btn.classList.remove('loading');
+      return;
+    }
+
+    // Simulate async submit
+    try {
+      await new Promise(r => setTimeout(r, 900)); // simulate network delay
+      status.textContent = 'Message sent — thank you!';
+      form.reset();
+    } catch (err) {
+      status.textContent = 'An error occurred. Please try again.';
+    } finally {
+      btn.disabled = false;
+      btn.classList.remove('loading');
+    }
+  });
+
+  // Mobile menu toggle (simple)
+  const menuToggle = document.getElementById('menuToggle');
+  const nav = document.querySelector('.navbar ul');
+  menuToggle && menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!expanded));
+    nav && nav.classList.toggle('open');
+  });
+})();
+</script>
+
 </body>
 </html>
